@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/byte-buddy-1.11.20.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/classmate-1.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/FastInfoset-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/hibernate-commons-annotations-5.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/hibernate-core-5.6.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/istack-commons-runtime-3.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/jandex-2.2.3.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/jaxb-runtime-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/jboss-logging-3.4.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/postgresql-42.2.24.jre7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/stax-ex-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/git/Assignment4/lib/txw2-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx.web.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Martins PC/Desktop/VSC Projects/javafx-sdk-19.0.2.1/lib/javafx-swt.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

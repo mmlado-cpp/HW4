@@ -33,16 +33,16 @@ public class OrderScene {
 		
 		//
 		
-		TextField numberTextField = new TextField();
-		VBox numberBox = new VBox(new Label("Number"), numberTextField);
+		TextField numberTxt = new TextField();
+		VBox numberBox = new VBox(new Label("Number"), numberTxt);
 		
 		DatePicker datePicker = new DatePicker();
 		VBox dateBox = new VBox(new Label("Date"), datePicker);
 		dateBox.setAlignment(Pos.CENTER_RIGHT);
 		
-		HBox numberDate = new HBox(numberBox, dateBox);
-		numberDate.setPadding(new Insets(10));
-		numberDate.setSpacing(50);
+		HBox numDate = new HBox(numberBox, dateBox);
+		numDate.setPadding(new Insets(10));
+		numDate.setSpacing(50);
 		
 		ComboBox<String> customerComboBox = new ComboBox<String>();
 		customerComboBox.setMinWidth(400);
@@ -66,23 +66,18 @@ public class OrderScene {
 		itemPrice.setPadding(new Insets(10));
 		itemPrice.setSpacing(15);
 		
-		VBox fieldBox = new VBox(numberDate, customerBox, itemPrice);
-		
-		//
-		
+		VBox fieldBox = new VBox(numDate, customerBox, itemPrice);
+
 		Button search = new Button("Search");
 		Button add = new Button("Add");
 		Button update = new Button("Update");
 		Button delete = new Button("Delete");
 		Button back = new Button("Back");
-		
-		
-		
-		
+
 		search.setOnAction(event -> {
-			if(!numberTextField.getText().isBlank()) {
-				if(OrderDataAccess.searchOrder(Integer.parseInt(numberTextField.getText())) != null){
-					currentOrder = OrderDataAccess.searchOrder(Integer.parseInt(numberTextField.getText()));
+			if(!numberTxt.getText().isBlank()) {
+				if(OrderDataAccess.searchOrder(Integer.parseInt(numberTxt.getText())) != null){
+					currentOrder = OrderDataAccess.searchOrder(Integer.parseInt(numberTxt.getText()));
 				}
 				
 				if(currentOrder != null) {
@@ -97,14 +92,14 @@ public class OrderScene {
 		
 		add.setOnAction(event -> {
 			String datePickerStr = (datePicker.getValue() == null) ? null : datePicker.getValue().toString();
-			final String[] fields = {numberTextField.getText(), datePickerStr, customerComboBox.getValue(), itemComboBox.getValue(), priceTextField.getText()};
+			final String[] fields = {numberTxt.getText(), datePickerStr, customerComboBox.getValue(), itemComboBox.getValue(), priceTextField.getText()};
 			
 			if(!isEmpty(fields)) {
 				LocalDate localDate = datePicker.getValue();
 				Date date = Date.valueOf(localDate);
 				final boolean added = OrderDataAccess.addOrder(Integer.parseInt(fields[0]), date, fields[3], Double.parseDouble(fields[4]), customerList.get(customerComboBox.getSelectionModel().getSelectedIndex()).getId());
 				if(added) {
-					clearOrderFields(numberTextField, datePicker, customerComboBox, itemComboBox, priceTextField);
+					clearOrderFields(numberTxt, datePicker, customerComboBox, itemComboBox, priceTextField);
 					showCreatedAlert("Success", "Order #" + fields[0] + " was added!");
 					
 					
@@ -122,7 +117,7 @@ public class OrderScene {
 		});
 		
 		update.setOnAction(event -> {
-			final String[] fields = {numberTextField.getText(), datePicker.getValue().toString(), customerComboBox.getValue(), itemComboBox.getValue(), priceTextField.getText()};
+			final String[] fields = {numberTxt.getText(), datePicker.getValue().toString(), customerComboBox.getValue(), itemComboBox.getValue(), priceTextField.getText()};
 			
 			if(!isEmpty(fields)) {
 				LocalDate localDate = datePicker.getValue();
@@ -145,7 +140,7 @@ public class OrderScene {
 				final boolean success = OrderDataAccess.deleteOrder(currentOrder.getNumber());
 					if(success) {
 						showCreatedAlert("Order Deleted", "Order #" + orderNumber + " successfully deleted");
-						clearOrderFields(numberTextField, datePicker, customerComboBox, itemComboBox, priceTextField);
+						clearOrderFields(numberTxt, datePicker, customerComboBox, itemComboBox, priceTextField);
 						
 						
 						currentOrder = null;
@@ -175,8 +170,7 @@ public class OrderScene {
 		
 		HBox allButtonBox = new HBox(customerButtonBox, buttons);
 		allButtonBox.setSpacing(80);
-		
-		//
+
 		
 		BorderPane root = new BorderPane();
 		
